@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAVEL.COM</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon"
+        href="https://th.bing.com/th?id=OIP.Ls9zZM14tyIjEVGBWacheQHaHa&w=250&h=250&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">TRAVEL.COM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active m-4  text-warning" aria-current="page" href="#destination">Destinations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active m-4  text-warning" href="#hotel">Hotels & Homes</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active m-4  text-warning" aria-current="page" href="#flight">
+                            Flights
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">First Class</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item">Economy</li>
+                            <li><a class="dropdown-item" href="#"></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active m-3  text-warning" href="#"><button class="btn btn-sm btn-outline-secondary">Register</button></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active m-3  text-warning" href="#"><button class="btn btn-sm btn-outline-secondary">Sign in</button></a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success text-white border-white" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="covervideo">
+            <video class="video" width="100%" autoplay loop muted>
+                <source src="https://pixabay.com/videos/nature-waves-ocean-sea-rock-31377/" type="video/mp4" />
+                <source src="./images/nature_-_31377 (1080p).mp4" type="video/ogg" />
+            </video>
+        </div>
+        <div class="text-overlay">
+          <h1 class="display-4">Plan Your Traveling With Us</h1>
+          <p class="lead">Discover amazing content and more.</p>
+         
+      </div>
+      
+      <!-- seaxchbox -->
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="mb-3">
+                        <label for="destination" class="form-label">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="Enter destination">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="checkin" class="form-label">Check-In Date</label>
+                                <input type="text" class="form-control datepicker" id="checkin" placeholder="Select check-in date">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="checkout" class="form-label">Check-Out Date</label>
+                                <input type="text" class="form-control datepicker" id="checkout" placeholder="Select check-out date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="persons" class="form-label">Number of Persons</label>
+                        <input type="number" class="form-control" id="persons" placeholder="Enter number of persons">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+         <!-- main cards -->
+         <!-- <div id="destination" class="destinations">
+    <div class="row m-3">
+        <h3 class="dest m-4 text-dark">Destinations</h3>
+        
+        <div class="col-4">
+            <div class="card m-3 shadow" >
+                <img style="height: 300px;width: 420px;margin: 10px;" src="./images/649b13386eb0a800194d589a.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Paris</h5>
+                    <p class="card-text  text-dark">Paris is the capital and largest city of France, located in the northern-central part of the country. It is one of the most famous and iconic cities in the world, known for its rich history, culture, art, and fashion. Here are some key facts and highlights about Paris:</p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card m-3 shadow" >
+                <img style="height: 300px;width: 420px;margin: 10px;" src="./images/photography-water-reflection-bali-wallpaper-preview.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title  text-dark">Bali</h5>
+                    <p class="card-text  text-dark">Bali is an Indonesian island known for its stunning natural beauty, vibrant culture, and tourism., enjoying traditional Balinese dance performances. It's a popular destination for relaxation, adventure, and cultural experiences.</p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card m-3 shadow">
+                <img style="height: 300px;width: 420px;margin: 10px;" src="./images/download (1).jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title  text-dark">Thailand</h5>
+                    <p class="card-text  text-dark">Thailand is a Southeast Asian country known for its rich culture, beautiful beaches, and vibrant cities. It's famous for its ornate temples, delicious street food, and lush jungles. Visitors can enjoy a variety of experiences, Visitors can enjoy a variety of experiences </p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+           main cards -->
+    <!-- <div class="row m-3 p-2">
+        <h3 class="dest m-4 text-white">Destinations</h3>
+        <div class="col-4">
+            <div class="card m-3 shadow" >
+                <img style="height: 300px;width: 400px;margin: 10px;" src="./images/photo-1605649487212-47bdab064df7.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-dark">Manali</h5>
+                    <p class="card-text  text-dark">Manali is the capital and largest city of up, located in the northern-central part of the country. It is one of the most famous and iconic cities in the world, known for its rich history, culture, art, and fashion. Here are some key facts and highlights about Paris:</p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card m-3 shadow" >
+                <img style="height: 300px;width: 400px;margin: 10px;" src="./images/istockphoto-1224360439-612x612.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title  text-dark">Lakshadweep</h5>
+                    <p class="card-text  text-dark">Lakshadweep is an    island known for its stunning natural beauty, vibrant culture, and tourism., enjoying traditional Balinese rbrbbrbr dance performances. It's a popular destination for relaxation, adventure, and cultural experiences.</p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card m-3 shadow">
+                <img style="height: 300px;width: 400px;margin: 10px;" src="./images/download (2).jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title  text-dark">Tajmahal</h5>
+                    <p class="card-text  text-dark">Thajmahal is a Southeast Asian country known for its rich culture, beautiful beaches, and vibrant cities. It's famous for its ornate temples, delicious street food, and lush jungles. Visitors can enjoy a variety of experiences, Visitors can enjoy a variety of experiences </p>
+                    <a href="#" class="btn btn-primary">Visit</a>
+                </div>
+            </div>
+        </div> -->
+    </div>  
+    <div id="destination" class="destinations">
+      <div class="album py-5 bg-light">
+        <h3 class="dest mb-5 text-dark text-center">Destinations</h3>
+          <div class="container">
+  
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm ">
+                  <img class="card-img-top" data-src="" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/649b13386eb0a800194d589a.webp" data-holder-rendered="true">
+                  <div class="card-body"><h4>Paris</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$70</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm ">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/photography-water-reflection-bali-wallpaper-preview.jpg" data-holder-rendered="true">
+                  <div class="card-body"><h4>Bali</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$80</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/download (1).jpeg" data-holder-rendered="true">
+                  <div class="card-body"><h4>Thailand</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$60</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/photo-1605649487212-47bdab064df7.jpeg" data-holder-rendered="true">
+                  <div class="card-body"><h4>Manali</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$75</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/istockphoto-1224360439-612x612.jpg" data-holder-rendered="true">
+                  <div class="card-body"><h4>Lakshadweeep</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$80</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/download (2).jpeg" data-holder-rendered="true">
+                  <div class="card-body"><h4>Tajmahal</h4>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$90</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                      </div>
+                      <small class="text-muted">9 mins</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+  </div>
+    <h3 class="text-center"><a class="more " href="#">See More</a></h3><br>
+    <div id="hotel" class="Hotels&Homes">
+        
+        <div class="album py-5 bg-light">
+            <h3 class="ho m-5 text-dark text-center">Hotels & Homes</h3>
+            <div class="container">
+    
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm ">
+                    <img class="card-img-top" data-src="" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/download (3).jpeg" data-holder-rendered="true">
+                    <div class="card-body"><h4>Paris</h4>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$70</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm ">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/download (4).jpeg" data-holder-rendered="true">
+                    <div class="card-body"><h4>India</h4>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$80</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/download (5).jpeg" data-holder-rendered="true">
+                    <div class="card-body"><h4>Africa</h4>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$60</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/download (6).jpeg" data-holder-rendered="true">
+                    <div class="card-body"><h4>Lakshadweeep</h4>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$75</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/images.jpeg" data-holder-rendered="true">
+                    <div class="card-body"><h4>Canada</h4>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$80</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-4">
+                  <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="./images/images (1).jpeg" data-holder-rendered="true">
+                    <div class="card-body"><h4>Bali</h4>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-outline-secondary text-danger">$90</button>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        </div>
+                        <small class="text-muted">9 mins</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+   <h3 class="text-center m-3"> <a class="moree" href="#">See More</a></h3><br>
+
+    <h3 id="flight" class="Flights text-center m-3">Flights</h3>
+     <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img height="300px" width="250px" src="./images/Airbus_A300B2-1C,_Air_France_AN1091113.jpg" class="card-img-top" alt="Flight Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Flight to Paris</h5>
+                        <p class="card-text">Explore the beautiful city of Paris.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img height="300px" width="250px" src="./images/1280px-New_York_Air_Boeing_737-300.jpg" class="card-img-top" alt="Flight Image 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Flight to New York</h5>
+                        <p class="card-text">Experience the Big Apple.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img height="300px" width="250px" src="./images/fhl0zb3x0aabyfy-jpeg.webp" class="card-img-top" alt="Flight Image 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Flight to Tokyo</h5>
+                        <p class="card-text">Discover the vibrant culture of Tokyo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- detailss -->
+    <div class="containerr mt-5">
+      <div class="row justify-content-center">
+          <div class="col-md-8">
+              <form>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                              <label for="departure" class="form-label">Departure</label>
+                              <input type="text" class="form-control" id="departure" placeholder="From">
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                              <label for="destination" class="form-label">Destination</label>
+                              <input type="text" class="form-control" id="destination" placeholder="To">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                              <label for="departure-date" class="form-label">Departure Date</label>
+                              <input type="date" class="form-control" id="departure-date">
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="mb-3">
+                              <label for="return-date" class="form-label">Return Date</label>
+                              <input type="date" class="form-control" id="return-date">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="passengers" class="form-label">Passengers</label>
+                      <input type="number" class="form-control" id="passengers" min="1" value="1">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Search Flights</button>
+              </form>
+          </div>
+      </div>
+  </div>
+  <br>
+  <hr>
+
+    <footer class="container py-5">
+        <div class="row">
+          <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+            <small class="d-block mb-3 text-muted">© 2023-2024</small>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Cool stuff</a></li>
+              <li><a class="text-muted" href="#">Random feature</a></li>
+              <li><a class="text-muted" href="#">Team feature</a></li>
+              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+              <li><a class="text-muted" href="#">Another one</a></li>
+              <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Resource</a></li>
+              <li><a class="text-muted" href="#">Resource name</a></li>
+              <li><a class="text-muted" href="#">Another resource</a></li>
+              <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Business</a></li>
+              <li><a class="text-muted" href="#">Education</a></li>
+              <li><a class="text-muted" href="#">Government</a></li>
+              <li><a class="text-muted" href="#">Gaming</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="#">Privacy</a></li>
+              <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+        <!-- Footer -->
+    
+        
+
+
+
+
+
+</body>
+
+</html>
